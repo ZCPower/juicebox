@@ -52,7 +52,7 @@ async function createTables() {
 
       CREATE TABLE tags (
           id SERIAL PRIMARY KEY
-          name VARCHAR(255) UNIQUE NOT NULL
+          name VARCHAR(255)  NOT NULL UNIQUE
       )
 
        CREATE TABLE post_tags (
@@ -145,31 +145,7 @@ async function createInitialPosts() {
     }
 }
 
-async function createTags(tagList) {
-    if (tagList.length === 0) {
-        return;
-    }
 
-    // need something like: $1), ($2), ($3 
-    const insertValues = tagList.map(
-        (_, index) => `$${index + 1}`).join('), (');
-    // then we can use: (${ insertValues }) in our string template
-
-    // need something like $1, $2, $3
-    const selectValues = tagList.map(
-        (_, index) => `$${index + 1}`).join(', ');
-    // then we can use (${ selectValues }) in our string template
-
-    try {
-        // insert the tags, doing nothing on conflict
-        // returning nothing, we'll query after
-
-        // select all tags where the name is in our taglist
-        // return the rows from the query
-    } catch (error) {
-        throw error;
-    }
-}
 
 async function rebuildDB() {
     try {
