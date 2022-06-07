@@ -323,6 +323,8 @@ async function getUserByUsername(username) {
     }
 }
 
+
+
 module.exports = {
     client,
     getAllUsers,
@@ -333,4 +335,5 @@ module.exports = {
     getUserById,
     updatePost,
     getPostsByTagName,
+    getAllTags
 }

@@ -17,22 +17,22 @@ async function createInitialUsers() {
         const albert = await createUser({
             username: "albert",
             password: "bertie99",
-            name: "Al",
-            location: "Jacksonville",
+            name: "Alberto Salazar",
+            location: "Nicaragua",
         });
 
         const sandra = await createUser({
             username: "sandra",
             password: "2sandy4me",
-            name: "Sandy",
-            location: "Gainesville",
+            name: "Sandy Cheeks",
+            location: "Texas",
         });
 
         const glamgal = await createUser({
             username: "glamgal",
             password: "soglam",
-            name: "Karen",
-            location: "Palatka",
+            name: "Material Girl",
+            location: "London",
         });
 
         console.log(albert);
