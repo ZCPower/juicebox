@@ -21,6 +21,7 @@ server.use((req, res, next) => {
     next();
 });
 
+
 const { client } = require('./db');
 client.connect();
 
